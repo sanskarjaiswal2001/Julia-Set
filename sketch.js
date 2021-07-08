@@ -10,7 +10,6 @@ function setup()
     pixelDensity(1);
     minSlider = createSlider(minVal, maxVal, minVal, 0.01);
     maxSlider = createSlider(minVal, maxVal, maxVal, 0.01);
-
 }
 function draw(){
     var maxIterations = 100;
@@ -19,10 +18,11 @@ function draw(){
     {
         for(var y = 0; y < height; y++)
         {
+            //Only difference from the Mandlebrot project is that the complex number remains constant in the iteration
             var a = map(x, 0, width, minSlider.value(), maxSlider.value());
             var b = map(y, 0, height, minSlider.value(), maxSlider.value());
 
-            var ca = map(mouseX, 0, width, -1, 1);
+            var ca = map(mouseX, 0, width, -1, 1);// To change the julia set based on cursor location
             var cb = map(mouseY, 0, width, -1, 1);
 
             var n = 0;
@@ -31,9 +31,7 @@ function draw(){
                 var aa = a*a - b*b;
                 var bb = 2 * a * b;
                 if (abs(a + b) > 4)
-                {
                     break;
-                }
                 a = aa + ca;
                 b = bb + cb;
                 n++;
@@ -41,9 +39,7 @@ function draw(){
             var bright = map(n, 0, maxIterations, 0, 255);
 
             if (n == maxIterations)
-            {
                 bright = 0;
-            }
 
             var pix = (x + y * width) * 4;
             pixels[pix + 0] = bright;
