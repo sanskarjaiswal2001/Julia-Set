@@ -1,9 +1,10 @@
 # Julia-Set
 A Javascript program to print the Julia Set
 
-This is a slightly modified version of [Mandlebrot Set project](https://github.com/sanskarjaiswal2001/Mandlebrot-Set) to visualize the [Julia Set](https://en.wikipedia.org/wiki/Julia_set) 
+## This is a slightly modified version of [Mandlebrot Set project](https://github.com/sanskarjaiswal2001/Mandlebrot-Set) to visualize the [Julia Set](https://en.wikipedia.org/wiki/Julia_set) 
 
 **Try it out here :** [Julia Set](https://sanskarjaiswal2001.github.io/Julia-Set/)
+
 
 **Screenshots :**
 
